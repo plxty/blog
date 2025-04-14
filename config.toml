@@ -1,0 +1,62 @@
+# serene v5.2.0
+#
+# - docs: https://github.com/isunjn/serene/blob/latest/USAGE.md
+# - check for updates: https://github.com/isunjn/serene/releases
+#
+#=========================================================================================
+
+base_url = "https://pen.guru"
+title = "aptenodytes"
+description = "[->+<]"
+default_language = "zh_CN"
+theme = "serene"
+output_dir = "public"
+compile_sass = true
+minify_html = true
+build_search_index = false # Keep this false, search is temporarily unsupported
+generate_feeds = false # Whether to generate a feed file in root, read docs for more info about rss feed
+feed_filenames = ["feed.xml"]
+taxonomies = [{ name = "tags" }]
+
+[markdown]
+highlight_code = true
+highlight_theme = "css"
+extra_syntaxes_and_themes = ["highlight_themes"]
+highlight_themes_css = [
+  { theme = "serene-light", filename = "hl-light.css" },
+  { theme = "serene-dark", filename = "hl-dark.css" },
+]
+render_emoji = false
+external_links_target_blank = true
+external_links_no_follow = true
+external_links_no_referrer = true
+smart_punctuation = false
+
+[slugify]
+paths = "on"
+taxonomies = "on"
+anchors = "on"
+
+#=========================================================================================
+
+[extra]
+
+sections = [
+  { name = "posts", path = "/posts", is_external = false },
+  { name = "#entry", path = "/tags/entry", is_external = false },
+  { name = "#try-catch", path = "/tags/try-catch", is_external = false },
+]
+blog_section_path = "/posts"
+
+back_link_text = "aptenodytes::super" # Text of the back button
+force_theme = false # false | "light" | "dark"
+
+footer_copyright = "(surviving 2025)"
+footer_credits = true # Whether to show "Built with zola and serene" in footer
+
+not_found_error_text = 'puts("404");exit();'
+not_found_recover_text = "← aptenodytes"
+
+reaction = false # Whether to enable anonymous emoji reactions (Note: You need to set up a working api endpoint to enable this feature)
+reaction_align = "right" # "left" | "center" | "right"
+reaction_endpoint = "https://example.com/api/reaction"
