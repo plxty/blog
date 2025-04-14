@@ -8,7 +8,7 @@ tags = ["entry"]
 
 驱动层实现 socket 的接口的例子，先看看 `socket` 是怎么调用的：
 
-```clike
+```c
 socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 ```
 
@@ -24,7 +24,7 @@ socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 
 先从 `SYSCALL_DEFINE3(socket)` 开始，
 
-```clike
+```c
 __sys_socket(family, type, protocol)
   struct socket *sock
   sock_create(family, type, protocol, &sock)
@@ -32,7 +32,7 @@ __sys_socket(family, type, protocol)
   sock_map_fd(sock, ...)
 ```
 
-```clike
+```c
 __sock_create(net, family, type, protocol, res, kern)
   struct socket *sock = sock_alloc()
   sock->type = type;
@@ -48,7 +48,7 @@ __sock_create(net, family, type, protocol, res, kern)
 
 看看写入，还是从 syscall 开始， `SYSCALL_DEFINE3(write)`：
 
-```clike
+```c
 ksys_write(fd, buf, count)
   struct fd f = fdget_pos(fd)
   ppos = file_ppos(f.file)
@@ -62,7 +62,7 @@ ksys_write(fd, buf, count)
 
 又是 ops，这里大概能定位到是 `socket_file_ops`，追溯一下怎么跟 fd 关联起来的，
 
-```clike
+```c
 __sys_socket
   sock_map_fd
     sock_alloc_file
@@ -71,7 +71,7 @@ __sys_socket
 
 好吧，关联回来了，就是在创建 socket 的时候注册了。所以在 socket 的时候会创建 socket 以及 net proto，那就继续往下层 `write_iter` 看看。
 
-```clike
+```c
 sock_write_iter(iocb, from)
   file = iocb->ki_filp
   struct msghdr msg = {.msg_iter = *from, .msg_iocb = iocb}
@@ -111,7 +111,7 @@ syscall → socket_file_ops (generic) → struct proto_ops (sock_register)
 
 这里基本上就是 `struct proto` 的绑定的地方，作为参数，所以来看看有什么发现。
 
-```clike
+```c
 sk_alloc(net, family, priority, struct proto* prot, kern)
   struct sock *sk = sk_prot_alloc(prot, priority | __GFP_ZERO, family)
     if !slab kmalloc(prot->obj_size, priority)

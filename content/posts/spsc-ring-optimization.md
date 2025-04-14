@@ -60,7 +60,7 @@ In detail: [https://rigtorp.se/ringbuffer](https://rigtorp.se/ringbuffer/)
 
 主要是提供 locking 相关的功能的，例如 spinlock 这个操作，
 
-```clike
+```c
 spin_lock(&lock);
 global_vars_a *= 2;
 spin_unlock(&lock);
@@ -70,7 +70,7 @@ spin_unlock(&lock);
 
 那么我们假设这个 spinlock 没有任何内存序保护，就有可能回出现 `global_vars_a` 先于 `&lock` 被读取！
 
-```clike
+```c
 register a0 = READ_ONCE(global_vars_a);
 spin_lock(&lock);
 a0 *= 2;
