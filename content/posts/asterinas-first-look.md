@@ -6,14 +6,15 @@ date = "2025-03-18"
 tags = ["entry"]
 +++
 
-目前还属于早期阶段，调度器这些都很残缺，不过基本上啥都能跑，只是性能或许不太好。调试环境我还是直接上的 Nix，方便可重复 <https://github.com/plxty/n9/blob/main/shell/asterinas.nix>（。
+目前还属于早期阶段，调度器这些都很残缺，不过基本上啥都能跑，只是性能或许不太好。
+
+WARN: 这是一篇基本纯代码层次的“杂章”，以后看看有没有空补完了（。
 
 还有对 ARM64 支持 = 0，感觉有空了可以折腾以下实现下这个架构玩玩。
 
 # Boot
 
 还是经典的 boot，主核心 boot 位于 `ostd/arch/x86/boot/bsp_boot.S`，
-
 
 1. 执行 `page_table_setup`，设置好页表
 2. 入栈 `long_mode_in_low_address` 函数，最后使用 retf 进行 far jump
@@ -22,7 +23,6 @@ tags = ["entry"]
 5. 最后走到了 `__linux_boot` 阶段，此时就会切换到 Rust 代码了
 
 代码位于 `ostd/src/arch/x86/boot/linux_boot/mod.rs`，
-
 
 1. 将 EFI 传递的参数（unsafe）存放到全局变量 `EARLY_INFO` 中，其中包括 cmdline、内存布局等信息
 2. 调用 `call_ostd_main` 进入早期的初始化阶段

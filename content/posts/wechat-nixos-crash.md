@@ -1,10 +1,18 @@
 +++
-title = "记录一个 NixOS 下 WeChat crash"
+title = "记录一个 NixOS 下 WeChat 崩溃"
 date = "2025-03-11"
 
 [taxonomies]
 tags = ["try-catch"]
 +++
+
+# News
+
+好消息，社区直接使用 AppImage 了，再也不用被这种依赖问题困扰辣！
+
+Ref: <https://github.com/NixOS/nixpkgs/blob/master/pkgs/by-name/we/wechat/package.nix>
+
+# [揥蚆蛒](https://www.zhihu.com/question/617695917)
 
 记录一次查 bug 指南，
 
