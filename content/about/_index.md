@@ -6,11 +6,19 @@ insert_anchor_links = "none"
 
 [extra]
 title = "418 I'm a penguin"
-subtitle = "嘿，被你发现了！来看看小企鹅🐧~"
+subtitle = "嘿，被你发现了！来看看小企鹅🐧"
 +++
 
+# Me, myself and I
 
-Lives [Penguru](https://mario.fandom.com/wiki/Penguru)! Running from 2024/12/17.
+Lives [Penguru](https://mario.fandom.com/wiki/Penguru)!
+
+WeChat `5b6u5L+h5Y+377yacmUtaXJpeA==`  
+Email `byte@pen.guru`，未来应该会加入 GPG 验证🕊  
+
+欢迎来联系🙊。
+
+# Historial
 
 * 字节跳动 2025-06
   * 在 STE 当[内核](https://www.volcengine.com/product/velinux)补丁 backport 工程师
@@ -28,7 +36,15 @@ Lives [Penguru](https://mario.fandom.com/wiki/Penguru)! Running from 2024/12/17.
 * 华南农业大学 2016-06
   * [软件工程](https://info.scau.edu.cn/_upload/article/files/bc/08/f48c4d6045768b2f2ec99736124e/0788e9b1-7128-44ba-8656-36c62e2d951b.pdf)，嗯，进来是不用耕地的
 
-WeChat `5b6u5L+h5Y+377yacmUtaXJpeA==`  
-Email `byte@pen.guru`，未来应该会加入 GPG 验证🕊  
+# Meet my friends
 
-欢迎来联系🙊。
+* [烟花易冷](https://www.zzfly.net)
+* [lhc328](https://github.com/lhc328)
+* [VirgilG72](https://virgilg72.github.io)
+* [雪猫社](https://www.yukicat.net)
+
+还有很多很多的朋友们，希望你们过得快乐！
+
+-----
+
+Built with [zola](https://www.getzola.org) and [serene](https://github.com/isunjn/serene), hosted via [Cloudflare](https://www.cloudflare.com/), running from 2024/12/17.
