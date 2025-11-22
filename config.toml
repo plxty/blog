@@ -1,6 +1,6 @@
 # https://github.com/isunjn/serene/blob/latest/config.example.toml
 
-base_url = "https://pen.guru"
+base_url = "https://kei.network"
 title = "aptenodytes"
 description = "[->+<]"
 default_language = "zh_CN"

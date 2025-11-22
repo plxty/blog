@@ -11,10 +11,8 @@ subtitle = "嘿，被你发现了！来看看小企鹅🐧"
 
 # Me, myself and I
 
-Lives [Penguru](https://mario.fandom.com/wiki/Penguru)!
-
 WeChat `5b6u5L+h5Y+377yacmUtaXJpeA==`  
-Email `byte@pen.guru`，未来应该会加入 GPG 验证🕊  
+Email `byte@kei.network`，未来应该会加入 GPG 验证🕊  
 
 欢迎来联系🙊。
 
@@ -45,6 +43,10 @@ Email `byte@pen.guru`，未来应该会加入 GPG 验证🕊
 
 还有很多很多的朋友们，希望你们过得快乐！
 
------
+# Kei5 Ngo4
+
+这其实是粤语的“企鹅”粤拼发音唷，因为没太找到合适的 Penguin 相关的域名，所以就用 Kei 代替了，读作 Key 就好~
+
+至于 `.network`，是因为我自己喜欢 `.net`，但是不巧的是被注册了，所以就退而求次哩，毕竟域名叫什么在现代来说没有那么重要了。
 
 Built with [zola](https://www.getzola.org) and [serene](https://github.com/isunjn/serene), hosted via [Cloudflare](https://www.cloudflare.com/), running from 2024/12/17.
