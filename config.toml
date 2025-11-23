@@ -46,7 +46,7 @@ blog_section_path = "/posts"
 back_link_text = "aptenodytes::super"
 force_theme = false # false | "light" | "dark"
 
-footer_copyright = "/cc-by-sa-4.0/ surviving twenty twenty-five"
+footer_copyright = "CC-BY-SA-4.0"
 footer_credits = false
 
 not_found_error_text = 'puts("404");exit();'
